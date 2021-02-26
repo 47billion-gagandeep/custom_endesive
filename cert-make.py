@@ -165,9 +165,9 @@ class Main(object):
         if not os.path.exists(cert) or not os.path.exists(cert_key) or not os.path.exists(
                 cert_pub) or not os.path.exists(cert_p12):
             client_pk = self.key_create()
-            client_csr = self.csr_create('CA', client_pk)
+            client_csr = self.csr_create ('CAx', client_pk)
             client_cert = self.csr_sign(client_csr)
-            client_p12 = self.pk12_create('CA'.encode('utf-8'), client_cert, client_pk)
+            client_p12 = self.pk12_create ('CAx'.encode (' utf-8 '), client_cert, client_pk)
             self.pem_save(cert, client_cert)
             self.key_save(cert_key, client_pk, '1234')
             self.key_save(cert_pub, client_pk, None)

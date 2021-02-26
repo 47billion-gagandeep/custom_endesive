@@ -23,7 +23,7 @@ def main():
         "sigbutton": False,
         "sigfield": "Signature1",
         "sigandcertify": True,
-        # "signaturebox": (470, 840, 570, 640),
+        "signaturebox": (470, 840, 570, 640),
         "signature": "Dokument podpisany cyfrowo ąćęłńóśżź",
 #        "signature_img": "signature_test.png",
         "contact": "mak@trisoft.com.pl",
