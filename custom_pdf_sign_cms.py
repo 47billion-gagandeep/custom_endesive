@@ -32,11 +32,10 @@ def main():
         "reason": "Dokument podpisany cyfrowo aą cć eę lł nń oó sś zż zź",
         "password": "1234",
     }
-    with open("demo2_user1.p12", "rb") as fp:
+    with open("pdf-signer.p12", "rb") as fp:
         p12 = pkcs12.load_key_and_certificates(
-            fp.read(), b"1234", backends.default_backend()
+            fp.read(), b"pdfsigner", backends.default_backend()
         )
-    print(p12)
     fname = "pdf.pdf"
     if len(sys.argv) > 1:
         fname = sys.argv[1]
